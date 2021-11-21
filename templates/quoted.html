@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    {% if look %}
+        A share of {{ look.name }} ({{ look.symbol }}) costs ${{ look.price | usd }} 
+    {% else %}
+        None
+    {% endif %}
+{% endblock %}
